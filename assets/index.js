@@ -5,7 +5,7 @@ const video = document.querySelector("video");
 const reproductor = new MediaPlayer({
   parametro: video, 
   plugins: [
-    //new AutoPlay()
+    new AutoPlay()
   ]
 });
 

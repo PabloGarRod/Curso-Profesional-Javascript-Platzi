@@ -43,16 +43,14 @@
         // return getPopularMovies().then(popularMovies =>
         //   popularMovies.slice(0, n).map(movie => movie.id)
         // );
+        const popularMovies = await getPopularMovies();
+        const ids = popularMovies.slice(0, n).map(movie => movie.id);
+        return ids;
         // try {
         //   const popularMovies = await getPopularMovies();
         // } catch (error) {
         //   console.log(error.message)
-        // }
-
-        const popularMovies = await getPopularMovies();
-        const ids = popularMovies.slice(0, n).map(movie => movie.id);
-        return ids;
-      }
+         }
 
       function renderMovies(movies) {
         const movieList = document.getElementById('movies');
