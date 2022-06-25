@@ -11,7 +11,7 @@ function MediaPlayer(configuracion){
       pause: ()=> this.para(),
       media: this.miVideo,
       get muted(){
-        return this.media.muted;
+        return this.miVideo.muted;
       },
 
       set muted(value){
